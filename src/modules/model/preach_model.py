@@ -14,7 +14,6 @@ class Preach(QObject):
         self._bible:str = None
         self._preacher_name :str = None
         self._head_description:str = None
-        self._tail_description:str =None
 
     
     @Property(str)
@@ -27,13 +26,10 @@ class Preach(QObject):
     
     @Property(str)
     def tail_description(self):
-        return self._tail_description
-
-    @tail_description.setter
-    def tail_description(self)->None:
-        self._tail_description = """
+        return """
         曼海姆华人基督教会\n
         date主日讲道《{self._preach_title}》\n
         {self._preacher_name}\n\n
         更多讲道和信息请关注官方主页：\n
         www.ccgm-mannheim.de"""
+
