@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "ccgm-video-recorder"
+version = "0.1.0"
+description = ""
+authors = ["Jinghua Lin <jinghualin@hotmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "ccgm_video_recorder"}]
+
+[tool.poetry.dependencies]
+python = ">=3.8, <3.11"
+pyside6 = "^6.5.0"
+moviepy = "^1.0.3"
+
+
+[tool.poetry.group.dev.dependencies]
+pylint = "^2.17.2"
+black = "^23.3.0"
+pyinstaller = "^5.10.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
